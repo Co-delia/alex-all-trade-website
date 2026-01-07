@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alex All Trade - Professional passenger and goods transportation services across South Africa.">
+    <meta name="keywords" content="logistics, passenger transport, goods transport, cargo, freight, delivery services">
+    <meta name="author" content="Alex All Trade">
+    <title>Alex All Trade | Passenger & Goods Transportation</title>
+    
+    <!-- External Libraries -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚚</text></svg>">
+</head>
+<body>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">AAT</div>
+                <div class="logo-text">Alex <span>All Trade</span></div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#map">Locations</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+                <a href="https://wa.me/+27736697307" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-whatsapp"></i> Quick Quote
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professional <span>Passenger & Goods</span> Transportation</h1>
+                <p>Alex All Trade provides safe, reliable, and efficient transportation services for passengers and goods across South Africa. Your trusted partner for all transportation needs.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Get a Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Specialized transportation solutions tailored to your needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>Passenger Transportation</h3>
+                    <p>Safe, comfortable, and reliable passenger transport services for individuals, groups, corporate clients, and special events.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Corporate shuttle services</li>
+                        <li><i class="fas fa-check-circle"></i> Group transportation</li>
+                        <li><i class="fas fa-check-circle"></i> Airport transfers</li>
+                        <li><i class="fas fa-check-circle"></i> Event transportation</li>
+                        <li><i class="fas fa-check-circle"></i> Long-distance passenger services</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Goods Transportation</h3>
+                    <p>Secure and efficient cargo transport with real-time tracking and professional handling for all types of goods.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> General freight transport</li>
+                        <li><i class="fas fa-check-circle"></i> Refrigerated goods transport</li>
+                        <li><i class="fas fa-check-circle"></i> Fragile items handling</li>
+                        <li><i class="fas fa-check-circle"></i> Nationwide delivery</li>
+                        <li><i class="fas fa-check-circle"></i> Express delivery services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Operating Locations</h2>
+                <p>We operate in key cities across South Africa to serve you better</p>
+            </div>
+            
+            <div class="map-container">
+                <div id="operationsMap"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Operations Gallery</h2>
+                <p>See our fleet and transportation services in action</p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="scrollable-gallery" id="scrollableGallery">
+                    <div class="gallery-item">
+                        <img src="assets/image1.jpg" alt="Passenger Bus">
+                        <div class="gallery-overlay">
+                            <h4>Passenger Bus Fleet</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2069&auto=format&fit=crop" alt="Goods Transportation">
+                        <div class="gallery-overlay">
+                            <h4>Goods Transport</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/image4.jpeg" alt="Delivery Truck">
+                        <div class="gallery-overlay">
+                            <h4>Delivery Truck</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" alt="Cargo Transport">
+                        <div class="gallery-overlay">
+                            <h4>Cargo Transport</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/image4.jpeg" alt="Fleet Vehicles">
+                        <div class="gallery-overlay">
+                            <h4>Fleet Management</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1562887189-e5d078343de4?q=80&w=2070&auto=format&fit=crop" alt="Passenger Van">
+                        <div class="gallery-overlay">
+                            <h4>Passenger Van</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-nav">
+                    <button class="gallery-nav-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="gallery-nav-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch for transportation quotes and inquiries</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Send Your Transportation Inquiry</h3>
+                    <form id="enquiryForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="service">Service Needed *</label>
+                            <select id="service" name="service" class="form-control" required>
+                                <option value="">Select a service</option>
+                                <option value="passenger">Passenger Transportation</option>
+                                <option value="goods">Goods Transportation</option>
+                                <option value="both">Both Services</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message Details *</label>
+                            <textarea id="message" name="message" class="form-control" required placeholder="Please provide details about your transportation needs, including number of passengers/type of goods, pick-up and drop-off locations, dates, and any special requirements..."></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send via Email
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">Alex <span>All Trade</span></div>
+                    <p>Professional passenger and goods transportation services across South Africa. Safe, reliable, and efficient transportation solutions.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" class="social-link" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/+27736697307" class="social-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:mckelsydevelops@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#map">Locations</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Passenger Transportation</a></li>
+                        <li><a href="#services">Goods Transportation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone-alt"></i> +27 73 669 7307</li>
+                        <li><i class="fas fa-envelope"></i> mckelsydevelops@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> South Africa Operations</li>
+                        <li><i class="far fa-clock"></i> 24/7 Emergency Services</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alex All Trade. All rights reserved. | Professional Transportation Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/+27736697307" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp Quick Chat
+    </a>
+
+    <!-- JavaScript Files -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
